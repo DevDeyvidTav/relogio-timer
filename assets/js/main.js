@@ -79,7 +79,7 @@ function relogio() {
     const hora = data.getHours();
     const minuto = data.getMinutes();
     const sec = data.getSeconds()
-    const relogio = document.querySelector('#relogio ');
+    const relogio = document.querySelector('#relogio');
     const conversaoWeekDay = weekDay(diaSemana);
     const conversaoMonth = writeMonth(mes)
     return relogio.innerHTML = `<p>${conversaoWeekDay}, ${diaMes} de ${conversaoMonth} de ${ano} ${hora}:${minuto}:${sec} </p>`
@@ -109,16 +109,19 @@ function iniciaTimer() {
 const selTimer = document.querySelector('.timer')
 const iniciar = document.querySelector('.iniciar')
 iniciar.addEventListener('click', function(event){
-    iniciaTimer()
+    iniciaTimer();
+    selTimer.style.color = "white"
 })
 const pausar = document.querySelector('.parar') 
 const zerar = document.querySelector('.zerar')
 
 pausar.addEventListener('click', function(evernt){
     clearInterval(timer)
+    selTimer.style.color = "black"
 })
 zerar.addEventListener('click', function(event){
     clearInterval(timer);
     selTimer.innerHTML = '00:00:00';
+    selTimer.style.color = "white"
     segundos = 0
 })
