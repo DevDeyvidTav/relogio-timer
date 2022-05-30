@@ -89,7 +89,7 @@ form button:hover {
   background-color: var(--primary-color-darker);
   transition: 0.3s;
 }
-#aplicaçao{
+#aplicacao{
   display: block;
   text-align: center;
   color: #fff;
