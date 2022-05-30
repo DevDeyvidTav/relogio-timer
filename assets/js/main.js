@@ -79,7 +79,7 @@ function relogio() {
     const hora = data.getHours();
     const minuto = data.getMinutes();
     const sec = data.getSeconds()
-    const relogio = document.querySelector('#relogio');
+    const relogio = document.querySelector('#relogio ');
     const conversaoWeekDay = weekDay(diaSemana);
     const conversaoMonth = writeMonth(mes)
     return relogio.innerHTML = `<p>${conversaoWeekDay}, ${diaMes} de ${conversaoMonth} de ${ano} ${hora}:${minuto}:${sec} </p>`
